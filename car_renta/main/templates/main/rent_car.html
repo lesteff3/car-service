@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+<title>Аренда Автомобилей </title>
+
+{% block content %}
+    <h2>Оформление заявки</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.order }}<br>
+        <p>Интересующий автомобиль: {{ form.product }}</p><br>
+        <p>Выберите цвет: {{ form.color }}</p><br>
+        <p>Ваш номер телефона: {{ form.phone }}</p><br>
+        <p>Нужная дата: {{ form.created_at }}</p>
+        <span>{{ error }}</span>
+        <button class="btn btn-success" type="submit">отправить данные</button>
+    </form>
+
+
+{% endblock %}

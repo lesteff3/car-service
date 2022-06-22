@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    <h1>{{title}}</h1>
+        <p>{{ auto.content }}</p>
+    <a href="{% url 'rent_car'%}" class="btn btn-warning">Перейти</a>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    <h1>{{title}}</h1>
+    {% for brand in brand_detail %}
+       <hr> <img src="{{ brand.brand_images.url }}">
+                {{ brand }}
+         <a href="{% url 'auto' brand.id %}" class="btn btn-warning">Перейти</a>
+    {% endfor %}
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+<title>Аренда Автомобилей </title>
+
+{% block content %}
+    <h2>Выберите страну производителя</h2>
+    <hr>
+    {% for item in model %}
+        <div>
+        <img src="{{ item.country_images.url }}">
+            <p>{{ item}}</p>
+        <a href="{% url 'brand' item.id %}" class="btn btn-warning">Перейти</a>
+        </div>
+    {% endfor %}
+
+{% endblock %}
