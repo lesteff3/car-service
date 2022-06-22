@@ -4,7 +4,7 @@
 
 Клонирование проекта и установка requirements.txt:
 
-git clone https://github.com/Viachaslau95/fit_work.git
+git clone https://github.com/lesteff3/car-service.git
 
 sudo pip install -r requirements.txt
 
