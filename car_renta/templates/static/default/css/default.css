@@ -234,6 +234,7 @@ main .rent button{
 }
 
 
+
 main .review h1{
     font-size: 70px;
     position: relative;
@@ -243,7 +244,7 @@ main .review h1{
 main .review h2{
     margin-top: 100px;
     position: relative;
-    left: 550px;
+    left: 420px;
     top: 40px;
 }
 
@@ -251,6 +252,13 @@ main .review h5{
     position: relative;
     left: 550px;
     top: 70px;
+}
+main .review p{
+    position: relative;
+    left: 450px;
+    top: 60px;
+    padding: 0.01px;
+    background: #f80000;
 }
 
 main .review a{
@@ -270,4 +278,58 @@ main .login h1{
     font-size: 70px;
     position: relative;
     left: 550px;
+}
+
+.alert-warning {
+    float:left;
+    width: 700px;
+    margin: 20px 34%;
+    text-align: left;
+    position: relative;
+    top: -1100px;
+    left: 300px;
+}
+
+.alert-warning h5{
+    max-width: 500px;
+    margin: 20px auto;
+    position: relative;
+    right: 30px;
+
+}
+
+
+main .profile h1{
+    font-size: 70px;
+    position: relative;
+    left: 500px;
+}
+
+main .profile h2{
+    position: relative;
+    left: 10px;
+    top: 50px;
+}
+
+
+main .profile h5{
+    margin-top: 100px;
+    position: relative;
+    left: 400px;
+    top: -108px;
+}
+
+main .profile h4{
+    margin-top: 100px;
+    position: relative;
+    left: 200px;
+    top: -80px;
+}
+
+
+main .profile a{
+    position: relative;
+    left: 500px;
+    top: -10px;
+
 }

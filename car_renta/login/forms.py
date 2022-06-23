@@ -24,9 +24,8 @@ class RegisterUserForm(UserCreationForm):
         max_length=100,
         widget=forms.TextInput(attrs={'autocomplete': 'last_name'}),
     )
-    phone_numbers = forms.CharField(
+    phone_numbers = forms.IntegerField(
         label=_('Номер телефона'),
-        max_length=100,
         widget=forms.TextInput(attrs={'autocomplete': 'phone_numbers'}),
     )
     address = forms.CharField(

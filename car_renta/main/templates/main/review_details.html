@@ -8,6 +8,7 @@
     <form method="post">
         {% csrf_token %}
         {{ form.user }}<br>
+        {{ form.model }}<br>
         {{ form.text }}
         <button class="btn btn-danger" type="submit">отправить данные</button>
     </form>

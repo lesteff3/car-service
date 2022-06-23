@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Личный кабинет{% endblock %}
+
+{% block content %}
+        <div class="profile">
+            <h1>Личный профиль</h1>
+            <h2>Оформленная заявка:</h2><br>
+            <h5>{{ profile.product }}</h5>
+            <h2>Статус:</h2>
+            <h4>{{ profile.get_status_display }}</h4>
+        <a href="{% url 'review' %}" class="btn btn-warning">отзывы</a>
+        </div>
+{% endblock %}

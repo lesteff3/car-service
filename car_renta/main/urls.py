@@ -13,6 +13,7 @@ urlpatterns = [
     path('rent_car/', views.register_rent_car, name='rent_car'),
     path('successful/', views.successful_register, name='successful'),
     path('review/', views.review, name='review'),
-    path('review_details/', views.review_details, name='review_details')
+    path('review_details/', views.review_details, name='review_details'),
+    path('profile/', views.profile_people, name='profile')
     # path('<int:pk>', views.AutoDetailView.as_view(), name='auto')
 ]

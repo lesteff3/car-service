@@ -111,7 +111,7 @@ class Auto(models.Model):
         default=Equipment.not_choice,
         choices=Equipment.choices
     )
-    years = models.CharField(max_length=20)
+    years = models.IntegerField()
     created_at = models.DateTimeField(auto_now=True)
 
     class Meta:
@@ -119,7 +119,7 @@ class Auto(models.Model):
         verbose_name_plural = ('Auto')
 
     def __str__(self):
-        return f'{self.brand} | {self.auto} |years| {self.years}| Equipment | {self.get_equpment_display()}'
+        return f'{self.brand} | Модель:{self.auto} Год выпуска:{self.years} Коплектация:{self.get_equpment_display()}'
 
     def get_absolute_url(self):
         return reverse('post', kwargs={'slug': self.slug})
@@ -127,6 +127,11 @@ class Auto(models.Model):
 
 class Review(models.Model):
     user = models.CharField('Ф.И.О', max_length=255)
+    model = models.ForeignKey(
+        Auto,
+        on_delete=models.PROTECT,
+        default=True
+    )
     text = models.TextField('Отзыв')
 
     def __str__(self):

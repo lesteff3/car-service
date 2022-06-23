@@ -1,4 +1,4 @@
-from django.forms import ModelForm, Select, DateInput, TextInput, Textarea
+from django.forms import ModelForm, Select, DateInput, TextInput, Textarea, NumberInput, DateTimeInput
 
 from .models import OrderItems, Review
 
@@ -16,11 +16,11 @@ class OrderItemsForm(ModelForm):
             "color": Select(attrs={
                 'class': 'form-control',
             }),
-            "phone": TextInput(attrs={
+            "phone": NumberInput(attrs={
                 'class': 'form-control',
-                'placeholder': 'Например: +375445865118'
+                'placeholder': 'Например: 375445865118'
             }),
-            "created_at": DateInput(attrs={
+            "created_at": DateTimeInput(attrs={
                 'class': 'form-control',
                 'type': 'date'
             }),
@@ -32,14 +32,16 @@ class ReviewForm(ModelForm):
     class Meta:
         model = Review
 
-        fields = ['user', 'text']
+        fields = ['user', 'model', 'text']
 
         widgets = {
             "user": TextInput(attrs={
                 'class': 'form-control',
                 'placeholder': 'Например: Иванов Иван Иванович'
             }),
-
+            "model": Select(attrs={
+                'class': 'form-control',
+            }),
             "text": Textarea(attrs={
                 'class': 'form-control',
                 'placeholder': 'Ваш отзыв'

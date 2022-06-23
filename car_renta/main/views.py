@@ -44,7 +44,7 @@ def register_rent_car(request):
             order = form.save(commit=False)
             order.order = request.user
             order.save()
-            return redirect('successful')
+            return redirect('profile')
     form = OrderItemsForm(instance=user)
 
     data = {
@@ -79,3 +79,9 @@ def review_details(request):
         'form': form,
     }
     return render(request, 'main/review_details.html', data)
+
+
+def profile_people(request):
+    if request.method == "GET":
+        profile = OrderItems.objects.filter(order=request.user).first()
+        return render(request, 'main/profile.html', {'profile': profile})
