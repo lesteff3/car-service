@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Country, Auto, OrderItems, Brand
+from .models import Country, Auto, OrderItems, Brand, Review
 
 
 class CountryAdmin(admin.ModelAdmin):
@@ -29,8 +29,13 @@ class OrderItemsAdmin(admin.ModelAdmin):
     search_fields = ('order',)
 
 
+class ReviewAdmin(admin.ModelAdmin):
+    list_display = ('user', 'text')
+
+
 admin.site.register(Country, CountryAdmin)
 admin.site.register(Brand, BrandAdmin)
 admin.site.register(Auto, AutoAdmin)
 admin.site.register(OrderItems, OrderItemsAdmin)
+admin.site.register(Review, ReviewAdmin)
 

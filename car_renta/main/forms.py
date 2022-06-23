@@ -1,5 +1,6 @@
-from django.forms import ModelForm, Select, DateInput, TextInput
-from .models import OrderItems
+from django.forms import ModelForm, Select, DateInput, TextInput, Textarea
+
+from .models import OrderItems, Review
 
 
 class OrderItemsForm(ModelForm):
@@ -24,4 +25,23 @@ class OrderItemsForm(ModelForm):
                 'type': 'date'
             }),
 
+        }
+
+
+class ReviewForm(ModelForm):
+    class Meta:
+        model = Review
+
+        fields = ['user', 'text']
+
+        widgets = {
+            "user": TextInput(attrs={
+                'class': 'form-control',
+                'placeholder': 'Например: Иванов Иван Иванович'
+            }),
+
+            "text": Textarea(attrs={
+                'class': 'form-control',
+                'placeholder': 'Ваш отзыв'
+            }),
         }

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Оформление заявки{% endblock %}
+
+{% block content %}
+    <div class="rent">
+    <h2>Добавление отзыва</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.user }}<br>
+        {{ form.text }}
+        <button class="btn btn-danger" type="submit">отправить данные</button>
+    </form>
+</div>
+
+{% endblock %}

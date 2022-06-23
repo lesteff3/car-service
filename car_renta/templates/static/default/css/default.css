@@ -1,0 +1,273 @@
+body {
+    background: #000000;
+    color: white;
+}
+
+aside{
+    float: left;
+    background: #000000;
+    width: 20%;
+    padding: 1%;
+    height: 150vh;
+    color: #ffffff;
+    border-right:2px solid#fff ;
+}
+
+aside img{
+    width: 150px;
+    float: left;
+    position: relative;
+    top: -20px;
+}
+
+aside .logo {
+    font-size: 40px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: -20px;
+
+}
+
+aside h1{
+    font-size: 40px;
+    margin-top: 80px;
+}
+
+aside ul {list-style: none}
+aside ul li{
+    color: #fff;
+    display: block;
+    margin-top: 20px;
+    transition: transform .5s ease;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+aside ul li:hover{
+    color: #eb5959;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+button a {
+    color: black;
+
+}
+
+
+main .features {
+    float: left;
+    color: white;
+    margin-top: 100px;
+    position: relative;
+    left: 600px;
+    width: 75%;
+}
+
+main .features h1 {
+    font-size: 80px;
+    position: relative;
+    right: 140px;
+    top: -40px
+}
+
+main .features h2{
+    font-size: 80px;
+    position: relative;
+    right: 250px;
+    top: -90px
+}
+main .features h5 {
+    max-width: 1000px;
+    margin: 20px auto;
+    position: relative;
+    right: 270px;
+}
+
+main .features a{
+    position: relative;
+    left: 40px;
+    top: 10px;
+}
+
+main .features img{
+    position: relative;
+    right: 180px;
+}
+
+
+main .choice p{
+    font-size: 30px;
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 680px;
+}
+
+main .choice img {
+    position: relative;
+    left: 600px;
+    display: block;
+    top: 50px;
+    padding: 1px;
+    background: #ffffff;
+}
+
+
+main .choice a{
+    position: relative;
+    left: 700px;
+
+    top: 40px;
+}
+
+main .title h1{
+    font-size: 60px;
+    position: relative;
+    left: 300px;
+}
+
+form {
+    margin-left: 32%;
+    width: 500px;
+    margin-top: 50px;
+    position: relative;
+    left: 350px;
+}
+
+main .my_list h1{
+    font-size: 70px;
+    position: relative;
+    left: 400px;
+}
+
+main .my_list img {
+    position: relative;
+    left: 600px;
+    display: block;
+    top: 50px;
+}
+
+
+main .my_list p{
+    font-size: 30px;
+    display: block;
+    position: relative;
+    top: -55px;
+    left: 800px;
+}
+
+
+main .my_list a{
+    position: relative;
+    left: 630px;
+
+    top: 40px;
+}
+
+
+main .detailed_information h1{
+    font-size: 70px;
+    position: relative;
+    left: 300px;
+}
+
+main .detailed_information h5{
+    max-width: 1000px;
+    margin: 20px auto;
+    position: relative;
+    left: 400px;
+    top: 50px;
+}
+
+main .detailed_information a{
+    position: relative;
+    left: 730px;
+
+    top: 50px;
+}
+
+main .content h2{
+    font-size: 80px;
+    position: relative;
+    left: 400px;
+    top: 0px
+}
+
+
+main .content img{
+    position: relative;
+    top:60px;
+    left: 100px;
+    padding: 1px;
+    background: #ffffff;
+}
+
+main .content h4{
+    font-size: 30px;
+    position: relative;
+    left: 850px;
+    top: -200px
+}
+
+main .content a{
+    position: relative;
+    left: 900px;
+    top: -170px;
+
+}
+
+
+main .rent h2{
+    font-size: 80px;
+    position: relative;
+    left: 350px;
+}
+
+main .rent button{
+    position: relative;
+    left: 150px;
+}
+
+
+main .review h1{
+    font-size: 70px;
+    position: relative;
+    left: 650px;
+}
+
+main .review h2{
+    margin-top: 100px;
+    position: relative;
+    left: 550px;
+    top: 40px;
+}
+
+main .review h5{
+    position: relative;
+    left: 550px;
+    top: 70px;
+}
+
+main .review a{
+    position: relative;
+    left: 700px;
+    top: 30px;
+}
+
+main .register h1{
+    font-size: 70px;
+    position: relative;
+    left: 550px;
+}
+
+
+main .login h1{
+    font-size: 70px;
+    position: relative;
+    left: 550px;
+}

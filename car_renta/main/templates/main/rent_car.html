@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 
-<title>Аренда Автомобилей </title>
+{% block title %}Оформление заявки{% endblock %}
 
 {% block content %}
+    <div class="rent">
     <h2>Оформление заявки</h2>
     <form method="post">
         {% csrf_token %}
@@ -12,8 +13,8 @@
         <p>Ваш номер телефона: {{ form.phone }}</p><br>
         <p>Нужная дата: {{ form.created_at }}</p>
         <span>{{ error }}</span>
-        <button class="btn btn-success" type="submit">отправить данные</button>
+        <button class="btn btn-danger" type="submit">отправить данные</button>
     </form>
-
+</div>
 
 {% endblock %}

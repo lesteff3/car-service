@@ -1,13 +1,15 @@
 {% extends 'base.html' %}
 
 
+{% block title %}Список авто{% endblock %}
 
 {% block content %}
+    <div class="my_list">
     <h1>{{title}}</h1>
     {% for brand in brand_detail %}
-       <hr> <img src="{{ brand.brand_images.url }}">
-                {{ brand }}
+       <img src="{{ brand.brand_images.url }}">
+        <p>{{ brand }}</p>
          <a href="{% url 'auto' brand.id %}" class="btn btn-warning">Перейти</a>
     {% endfor %}
-
+    </div>
 {% endblock %}

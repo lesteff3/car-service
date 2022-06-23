@@ -11,6 +11,8 @@ urlpatterns = [
     path('auto/<int:brand_id>', views.auto, name='auto'),
     path('auto_details/<int:pk>', views.AutoDetailView.as_view(), name='auto_detail'),
     path('rent_car/', views.register_rent_car, name='rent_car'),
-    path('successful/', views.successful_register, name='successful')
+    path('successful/', views.successful_register, name='successful'),
+    path('review/', views.review, name='review'),
+    path('review_details/', views.review_details, name='review_details')
     # path('<int:pk>', views.AutoDetailView.as_view(), name='auto')
 ]

@@ -93,6 +93,7 @@ class Auto(models.Model):
     auto = models.CharField(max_length=100)
     content = models.TextField(null=True, blank=True, verbose_name="description")
     slug = models.SlugField(max_length=255, unique=True, db_index=True, verbose_name='URL')
+    auto_images = models.ImageField(null=True, blank=True, upload_to='models')
     brand = models.ForeignKey(
         "Brand",
         on_delete=models.PROTECT,
@@ -123,3 +124,10 @@ class Auto(models.Model):
     def get_absolute_url(self):
         return reverse('post', kwargs={'slug': self.slug})
 
+
+class Review(models.Model):
+    user = models.CharField('Ф.И.О', max_length=255)
+    text = models.TextField('Отзыв')
+
+    def __str__(self):
+        return f'{self.user} | отзыв {self.text}'

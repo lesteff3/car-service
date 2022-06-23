@@ -1,16 +1,17 @@
 {% extends 'base.html' %}
 
-<title>Аренда Автомобилей </title>
+{% block title %}Аренда автомобиля{% endblock %}
 
 {% block content %}
-    <div class="features">
+    <div class="content">
+        <h2>Список Автомобилей</h2>
     {% for auto in auto_detail %}
+        <img src="{{auto.auto_images.url }}">
         <h4>Марка: {{ auto.brand }}</h4>
         <h4>Модель: {{ auto.auto }}</h4>
         <h4>Год выпуска: {{ auto.years }}</h4>
         <h4>Комплектация: {{ auto.get_equpment_display}}</h4>
-        <a href="{% url 'auto_detail' auto.id%}" class="btn btn-warning">Перейти</a>
-        <hr>
+        <a href="{% url 'auto_detail' auto.id%}" class="btn btn-warning">Детальнее</a>
         {% endfor %}
-
+    </div>
 {% endblock %}
