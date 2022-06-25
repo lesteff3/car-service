@@ -111,7 +111,7 @@ class Auto(models.Model):
         default=Equipment.not_choice,
         choices=Equipment.choices
     )
-    years = models.IntegerField()
+    years = models.PositiveIntegerField()
     created_at = models.DateTimeField(auto_now=True)
 
     class Meta:
@@ -129,7 +129,7 @@ class Review(models.Model):
     user = models.CharField('Ф.И.О', max_length=255)
     model = models.ForeignKey(
         Auto,
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
         default=True
     )
     text = models.TextField('Отзыв')
